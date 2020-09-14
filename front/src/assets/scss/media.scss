@@ -1,0 +1,176 @@
+// Медиа запросы
+@media (max-width: 576px) {
+  .radius {
+    border-radius: 30px 30px 0 0;
+  }
+  .b-card-radius {
+    border-radius: 0;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .main-title {
+    font-size: 20px;
+  }
+  .back {
+    background: none;
+  }
+}
+@media (min-width: 576px) {
+  .radius {
+    border-radius: 15px 0 0 15px;
+  }
+  .b-card-radius {
+    border-radius: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .form {
+    width: 50%;
+  }
+}
+@media (max-width: 1200px) {
+  .form {
+    width: 75%;
+  }
+}
+
+// Sidebar and header media
+@media (min-width: 700px) {
+  .main-content {
+    margin-left: 310px;
+  }
+}
+
+@media (max-width: 700px) {
+  .v-sidebar-menu {
+    left: -310px!important;
+  }
+  .menu-button {
+    display: block!important;
+  }
+  .v-header {
+    padding-left: 70px!important;
+  }
+}
+
+@media (max-width: 900px) {
+  .v-header {
+    flex-direction: column-reverse!important;
+  }
+}
+
+@media (max-width: 430px) {
+  .v-header {
+    z-index: 999;
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    padding-bottom: 5px;
+    //height: ;
+    h4 {
+      font-size: 20px;
+      margin-left: -45px;
+    }
+  }
+  .avatar {
+    width: 50px!important;
+    height: 50px!important;
+  }
+  .page-content {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 360px) {
+  .v-sidebar-menu {
+    max-width: 260px!important;
+    min-width: 260px!important;
+  }
+  .menu-button.click {
+    left: 270px!important;
+  }
+}
+
+////////////// Profile dropdown //////////////
+@media (max-width: 900px) {
+  .profile-card {
+    left: 5px;
+  }
+}
+
+////////////// ShopList ///////////////////////
+@media (max-width: 1200px) {
+  .button-title {
+    display: none!important;
+  }
+}
+@media (min-width: 1200px) {
+  .drp{
+    width: 90%!important;
+  }
+}
+@media (max-width: 550px) {
+  .shopstable th:nth-child(2){
+    display: none!important;
+  }
+  .shopstable tbody tr td:nth-child(2){
+    display: none!important;
+  }
+}
+
+/////////////// RermissionList ///////////////////
+@media (max-width: 780px) {
+  .permission_table th:nth-child(1) {
+    display: none;
+  }
+  .permission_table tbody tr td:nth-child(1){
+    display: none!important;
+  }
+
+  .permission_table th:nth-child(3) {
+    display: none;
+  }
+  .permission_table tbody tr td:nth-child(3){
+    display: none!important;
+  }
+}
+
+/////////////// FizList /////////////////////////
+@media (max-width: 1200px) {
+  .button-title {
+    display: none!important;
+  }
+}
+@media (max-width: 950px) {
+  .fiztable th:nth-child(1) {
+    display: none;
+  }
+  .fiztable tbody tr td:nth-child(1){
+    display: none!important;
+  }
+}
+
+////////////// PostRussia //////////////////////
+
+@media (max-width: 1024px) {
+  .posttable th:nth-child(3) {
+    display: none!important;
+  }
+  .posttable tbody tr td:nth-child(3){
+    display: none!important;
+  }
+  .posttable tbody tr td:nth-child(1) {
+    max-width: 100px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 760px) {
+  .posttable th:nth-child(1) {
+    display: none!important;
+  }
+  .posttable tbody tr td:nth-child(1) {
+    display: none!important;
+  }
+}

@@ -1,0 +1,377 @@
+@import "./media.scss";
+$main-button-color: #4054B2;
+$input-bg-color: #E8E8E8;
+$input-border-color: #909090;
+$input-label-color: #5D5D5D;
+$input-focus-border-color: #6202EE;
+$text-color: #000000;
+$white-text: #FFFFFF;
+$link-color: #1976D2;
+$sidebar-main-color: #58608B;
+
+
+
+* {
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//////////////// Form styles /////////////////
+.form-group {
+  position: relative;
+}
+
+.b-input {
+  background: $input-bg-color!important;
+  border: 2px solid $input-border-color;
+  border-radius: 0;
+  margin-bottom: 10px;
+  height: 55px;
+  padding-top: 15px;
+  &:focus {
+    border: 2px solid $input-focus-border-color;
+    border-radius: 5px 5px 0 0;
+    outline: none;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(156,156,156,1);
+    -moz-box-shadow: 0 2px 3px 0 rgba(156,156,156,1);
+    box-shadow: 0 2px 3px 0 rgba(156,156,156,1);
+    background: $input-bg-color;
+  }
+}
+
+.b-input-browse {
+  border-radius: 0!important;
+}
+
+.b-input-label {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  font-size: 16px;
+  color: $input-label-color;
+  pointer-events: none;
+  font-weight: 400!important;
+  transition: .5s;
+  z-index: 99;
+}
+
+.b-input-label-date {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  font-size: 16px;
+  color: $input-label-color;
+  pointer-events: none;
+  transition: .5s;
+  z-index: 99;
+}
+
+.form-group .b-input:focus ~ .b-input-label,
+.form-group .b-input:valid ~ .b-input-label {
+  top: 5px;
+  font-size: 12px;
+  color: $input-focus-border-color;
+}
+
+.form-group .b-input:not(:placeholder-shown) ~ .login-autocomp-label,
+.form-group .b-input:-webkit-autofill ~ .password-autocomp-label {
+  top: 5px!important;
+  color: #6202ee!important;
+  font-size: 12px!important;
+}
+
+
+.form-group .b-input:disabled ~ .b-input-label {
+  top: 5px;
+  font-size: 12px;
+  color: $input-focus-border-color;
+}
+////////////// end block ///////////////
+
+//////////// Sidebar styles //////////////
+.v-sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #283470;
+  min-width: 300px;
+  max-width: 300px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  transition: left .3s ease;
+}
+.menu {
+  padding: 0;
+  margin-bottom: 0;
+  .menu-item {
+    list-style: none;
+    line-height: 60px;
+    i {
+      margin-right: 10px;
+      color: $sidebar-main-color;
+      width: 20px;
+      height: 20px;
+    }
+    .menu-item-name {
+      color: $sidebar-main-color;
+      font-size: 16px;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding-left: 35px;
+      display: block;
+      border-left: 3px solid transparent;
+      &:hover {
+        color: $white-text;
+        border-left-color: $white-text;
+        background: $sidebar-main-color;
+        i {
+          color: $white-text;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: $white-text!important;
+    border-left-color: $white-text!important;
+    background: $sidebar-main-color!important;
+    i {
+      color: #ffffff;
+    }
+  }
+  .menu-children8 {
+    position: static;
+    display: none;
+    margin-top: 10px;
+    li {
+      line-height: 50px;
+      list-style: none;
+      border-bottom: none;
+      .menu-children-item-link {
+        font-size: 16px;
+        color: $sidebar-main-color;
+        padding-left: 75px;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:hover {
+          color: $white-text;
+        }
+      }
+    }
+  }
+
+  .menu-children6 {
+    position: static;
+    display: none;
+    margin-top: 10px;
+    li {
+      line-height: 50px;
+      list-style: none;
+      border-bottom: none;
+      .menu-children-item-link {
+        font-size: 16px;
+        color: $sidebar-main-color;
+        padding-left: 75px;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:hover {
+          color: $white-text;
+        }
+      }
+    }
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+.file-input {
+  position: relative;
+}
+.fakefile {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 24px;
+  color: #1976D2;
+}
+.inputfile {
+  height: 55px;
+  border-bottom: 2px solid $input-border-color;
+  background: $input-bg-color;
+}
+
+.menu-button {
+  position: fixed;
+  top: 23px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  border-radius: 3px;
+  z-index: 1000;
+  transition: left .3s ease;
+  i {
+    font-size: 25px;
+    color: $text-color;
+    line-height: 40px;
+  }
+}
+
+.menu-button.click {
+  left: 310px;
+}
+
+.menu-button.click i:before {
+  content: '\f00d';
+}
+
+.v-sidebar-menu.show-sidebar {
+  left: 0!important;
+}
+// Prompt -> Подсказка добавить магазин
+.prompt{
+  background: #fff;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 5px;
+  z-index:9999;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+.prompt span{
+  font-size: 1.3em;
+  margin: -5px 5px 0 0;
+  font-weight: bold;
+}
+
+.prompt::before{
+  content: "";
+  position: absolute;
+  top: 25%;
+  width: 25px;
+  z-index:9999;
+  height: 25px;
+  z-index: -1;
+  background: #fff;
+  left:-8px;
+  transform: rotate(-45deg);
+}
+.toasts, .toasts2{
+  position: fixed;
+  margin-left: -100px;
+  z-index: 9999;
+}
+.toasts2{
+  opacity: 0;
+}
+
+
+.border_top {
+  border-top: 1px solid $sidebar-main-color;
+}
+////////////// end block //////////////
+
+
+
+////////////// Profile dropdown //////////////
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  .avatar {
+    cursor: pointer;
+  }
+  .profile-card {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      border-top: 1px solid #DFE0EB;
+      padding-top: 20px;
+    }
+  }
+  .profile-card.show-card {
+    display: flex;
+  }
+}
+//////////// end block //////////////
+
+
+/////////// Text sizes
+.text-style {
+  font-size: 20px;
+  font-weight: 500;
+}
+.small-text {
+  font-size: 16px;
+}
+
+.small-text-gray {
+  font-size: 12px;
+  color: #5C5C5C;
+}
+
+.button {
+  font-size: 18px;
+  background: $main-button-color!important;
+}
+/////////////////////
+
+//////////// Картинка фона /////////////
+.back {
+  background-image: url(../../static/register_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Фон для карточки входа */
+.back2 {
+  background-image: url(../../static/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+
+
+
+

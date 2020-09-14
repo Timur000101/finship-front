@@ -1,0 +1,7 @@
+/.idea/
+/front/node_modules/
+/front/dist/
+/front/static/rest_framework/
+/front/static/debug_toolbar/
+/front/static/admin/
+/front/media/
